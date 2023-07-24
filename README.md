@@ -23,68 +23,94 @@ This is an Array Method CheatSheet for JavaScript.
 ### Array
 
 ```js
-// ARRAYS
+// Use these arrays for the examples below:
 const myPets = ["Dog", "Cat", "Bird", "Turtle"];
 const myFish = ["Fish"];
 const myGerbil = ["Gerbil"];
 const newArray = ["Zebra", "Giraffe"];
 ```
 
----
-
 ```js
     push(); & unshift();
-newArray.push('Hippo');
-// newArray = ['Zebra','Giraffe','Hippo']
 
+MUTATION OF ARRAY
+
+// push adds Hippo to the end of the array to change and return newArray = ['Zebra','Giraffe','Hippo']
+newArray.push('Hippo');
+
+// unshift adds Hippo to the beginning of the array to change and return newArray = ['Hippo', 'Zebra', 'Giraffe']
 newArray.unshift('Hippo')
-// new Array = ['Hippo', 'Zebra', 'Giraffe']
 ```
+
 
 ---
 
 ```js
     pop(); & shift();
+
+MUTATION OF ARRAY
+
+// removes and returns the last item of the array, ['Giraffe']
 newArray.pop();
-// new Array = ['Zebra']
+// removes and returns the first item of the array, ['Zebra']
 newArray.shift();
-// new Array = ['Giraffe']
+
+newArray will now only return ["Giraffe"]
 
 ```
 
 ---
 
 ```js
+
 indexOf();
 
+READ ONLY
+
+// finds the index of the item Cat inside myPets array
 myPets.indexOf("Cat"); // 1
 ```
 
 ---
 
 ```js
+
 join();
 
-myPets.join(" "); // Dog Cat Hamster
+NEW COPY
 
-myPets.join(" and "); // Dog and Cat and Hamster
+// joins the items in the array myPets, and adds a space (" ") 
+myPets.join(" ");
+
+// joins the items in the array myPets, and adds " and " between each item.
+myPets.join(" and ");
+
 ```
 
 ---
 
 ```js
+
 slice();
 
-myPets.slice(1); // ['Cat', 'Hamster']
+NEW COPY
 
+// removes the items prior to the index number 1 and returns a COPY of myPets
+myPets.slice(1); // ["Cat", "Bird", "Turtle"]
+
+// removes the items prior to the index 1, and  items with index 2 and after and returns a COPY of myPets
 myPets.slice(1, 2); // ['Cat']
 ```
 
 ---
 
 ```js
-splice();
 
+splice(startatindex, numberofitemstodelete, "replacement");
+
+MUTATION OF ARRAY
+
+// splice returns deleted items; 
 myPets.splice(1, 2, "Lizard"); // ['Dog', 'Lizard'];
 ```
 
@@ -186,6 +212,10 @@ values.sort((a, b) => a - b); // [1, 1, 2, 3, 4, 6, 7]
 myPets.sort(); // ['Bird', 'Cat', 'Dog', 'Turtle']
 ```
 
+
+
+
+REGEX
                     \D captures non numeric
                     \d captures digits
                     .  matches any character
