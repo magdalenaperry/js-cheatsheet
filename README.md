@@ -31,7 +31,7 @@ const newArray = ["Zebra", "Giraffe"];
 ```
 
 ```js
-    push(); & unshift();
+push(); & unshift();
 
 MUTATION OF ARRAY
 
@@ -46,7 +46,7 @@ newArray.unshift('Hippo')
 ---
 
 ```js
-    pop(); & shift();
+pop(); & shift();
 
 MUTATION OF ARRAY
 
